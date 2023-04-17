@@ -1,4 +1,4 @@
-= UI for Khronos Antora sites
+= Antora Default UI
 // Settings:
 :experimental:
 :hide-uri-scheme:
@@ -19,16 +19,19 @@
 :url-nvm-install: {url-nvm}#installation
 :url-source-maps: https://developer.mozilla.org/en-US/docs/Tools/Debugger/How_to/Use_a_source_map
 
-// image:{img-ci-status}[CI Status (GitLab CI), link={url-ci-pipelines}]
+image:{img-ci-status}[CI Status (GitLab CI), link={url-ci-pipelines}]
 
-This project provides the default UI for Khronos {url-antora}[Antora] sites.
-The default branch is `main` and was forked from the `master` branch of the
-{url-project}[Antora Default UI] project on April 16, 2023 at commit
-41b1c83f648a656fcbb274a8003d7292ba4136b0.
-This repository will be kept loosely in synchronization with the upstream.
+This project is an archetype that demonstrates how to produce a UI bundle that can be used by {url-antora}[Antora] to generated a documentation site.
+You can see a preview of the default UI at {url-preview}.
 
-The remainder of this README is from the original upstream README, which is
-also preserved in README.upstream.adoc.
+While the default UI is ready to be used with Antora, the intent is that you'll fork it and customize it for your own needs.
+It's intentionally minimalistic so as to give you a good starting point without requiring too much effort to customize.
+
+== Code of Conduct
+
+The Antora project and its project spaces are governed by our https://gitlab.com/antora/antora/-/blob/HEAD/CODE-OF-CONDUCT.adoc[Code of Conduct].
+By participating, you're agreeing to honor this code.
+Let's work together to make this a welcoming, professional, inclusive, and safe environment for everyone.
 
 == Use the Default UI
 
