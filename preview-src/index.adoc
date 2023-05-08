@@ -347,3 +347,12 @@ main() { printf("Hello, world\n"); }
 ----
 in vec4 color;
 ----
+
+[source,hlsl]
+----
+struct VS_OUTPUT
+{
+    float4 Position : SV_Position;
+    float3 Color : COLOR0;
+};
+----
