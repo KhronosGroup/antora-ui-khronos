@@ -2,6 +2,10 @@
   'use strict'
 
   var hljs = require('highlight.js/lib/highlight')
+
+  // Try to include a static JS file under src/static/js/vendor/
+  require('./js/vendor/hlsl.js')
+
   hljs.registerLanguage('asciidoc', require('highlight.js/lib/languages/asciidoc'))
   hljs.registerLanguage('bash', require('highlight.js/lib/languages/bash'))
   hljs.registerLanguage('clojure', require('highlight.js/lib/languages/clojure'))
@@ -11,6 +15,7 @@
   hljs.registerLanguage('diff', require('highlight.js/lib/languages/diff'))
   hljs.registerLanguage('dockerfile', require('highlight.js/lib/languages/dockerfile'))
   hljs.registerLanguage('elixir', require('highlight.js/lib/languages/elixir'))
+  hljs.registerLanguage('glsl', require('highlight.js/lib/languages/glsl'))
   hljs.registerLanguage('go', require('highlight.js/lib/languages/go'))
   hljs.registerLanguage('groovy', require('highlight.js/lib/languages/groovy'))
   hljs.registerLanguage('haskell', require('highlight.js/lib/languages/haskell'))
