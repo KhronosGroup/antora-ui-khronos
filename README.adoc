@@ -27,6 +27,9 @@ The default branch is `main` and was forked from the `master` branch of the
 41b1c83f648a656fcbb274a8003d7292ba4136b0.
 This repository will be kept loosely in synchronization with the upstream.
 
+The HLSL grammar was obtained from
+https://github.com/highlightjs/highlightjs-hlsl and is under an MIT license.
+
 The remainder of this README is from the original upstream README, which is
 also preserved in README.upstream.adoc.
 

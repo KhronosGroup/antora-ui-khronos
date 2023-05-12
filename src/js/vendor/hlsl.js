@@ -1,3 +1,9 @@
+// Copyright 2021 Steg Levesque (@stef-levesque)
+// SPDX-License-Identifier: MIT
+
+// Modified from the version in
+// https://github.com/highlightjs/highlightjs-hlsl
+
 /*
 Language: HLSL
 Description: High-level shader language
