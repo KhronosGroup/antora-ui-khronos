@@ -33,10 +33,10 @@ body {
 
 .navbar-brand .navbar-item:first-child {
   align-self: center;
-  padding: 0;
   font-size: calc(22 / var(--rem-base) * 1rem);
   flex-wrap: wrap;
   line-height: 1;
+  max-height: 4.5rem;
 }
 
 .navbar-brand .navbar-item:first-child a {
@@ -192,6 +192,7 @@ body {
   .navbar-brand .navbar-item.search {
     padding-left: 0;
     padding-right: 0;
+    padding-top: 1.25rem;
   }
 }
 
