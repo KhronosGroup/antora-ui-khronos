@@ -3,12 +3,12 @@
     <div class="navbar-brand">
       <a class="navbar-item" href="{{{or site.url siteRootPath}}}">{{site.title}}</a>
       <div class="navbar-item">
-        <img src="{{{uiRootPath}}}/Vulkan_White_Dec16.svg" height="100%"></img>
+        <img alt="Vulkan White Label" src="{{{uiRootPath}}}/Vulkan_White_Dec16.svg" height="100%" />
       </div>
       {{#if env.SITE_SEARCH_PROVIDER}}
       <div class="navbar-item search hide-for-print">
         <div id="search-field" class="field">
-          <input id="search-input" type="text" placeholder="Search the docs"{{#if page.home}} autofocus{{/if}}>
+          <label for="search-input"></label><input id="search-input" type="text" placeholder="Search the docs"{{#if page.home}} autofocus{{/if}}>
         </div>
       </div>
       {{/if}}
@@ -41,6 +41,18 @@
           </div>
         </div>
             -->
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Tutorial</a>
+          <div class="navbar-dropdown is-right">
+            <a class="navbar-item" href="{{siteRootPath}}/tutorial/latest/index.html">Vulkan Tutorial</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Samples</a>
+          <div class="navbar-dropdown is-right">
+            <a class="navbar-item" href="{{siteRootPath}}/samples/latest/README.html">Vulkan Samples</a>
+          </div>
+        </div>
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link" href="#">Help</a>
           <div class="navbar-dropdown is-right">
