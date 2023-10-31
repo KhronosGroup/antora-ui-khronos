@@ -1,7 +1,7 @@
-= UI Element Style Guide
-:navtitle: UI Element Styles
+= UI Element Style and Behavior Guide
+:navtitle: UI Element Styles and Behaviors
 
-When creating a UI theme for Antora, there are certain elements in the UI that require support from the CSS to work correctly.
+When creating a UI theme for Antora, there are certain elements in the UI that require support from the CSS--as well as JavaScript in some cases--to work correctly.
 This list includes elements in the shell (i.e., frame) and in the document content.
 This document identifies these UI elements.
 
@@ -21,3 +21,4 @@ These elements include:
 * xref:list-styles.adoc[Lists]
 * xref:sidebar-styles.adoc[Sidebars]
 * xref:ui-macro-styles.adoc[Button, keybinding, and menu UI macros]
+* xref:code-blocks.adoc[Code blocks]
