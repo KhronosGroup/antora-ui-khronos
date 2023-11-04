@@ -98,7 +98,7 @@ _/
   js/
     site.js
   static/
-    about.txt
+    notice.txt
   favicon.ico
   favicon.png
 component-a/
@@ -168,7 +168,7 @@ _/
   js/
     site.js
   static/
-    about.txt
+    notice.txt
 component-a/
 favicon.ico
 favicon.png
