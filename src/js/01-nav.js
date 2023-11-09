@@ -6,6 +6,7 @@
   var navContainer = document.querySelector('.nav-container')
   var navToggle = document.querySelector('.nav-toggle')
   var nav = navContainer.querySelector('.nav')
+  var navMenuToggle = navContainer.querySelector('.nav-menu-toggle')
 
   navToggle.addEventListener('click', showNav)
   navContainer.addEventListener('click', trapEvent)
@@ -21,6 +22,21 @@
     scrollItemToMidpoint(menuPanel, currentPageItem.querySelector('.nav-link'))
   } else {
     menuPanel.scrollTop = 0
+  }
+
+  if (navMenuToggle) {
+    navMenuToggle.addEventListener('click', function () {
+      var collapse = !this.classList.toggle('is-active')
+      find(menuPanel, '.nav-item > .nav-item-toggle').forEach(function (btn) {
+        collapse ? btn.parentElement.classList.remove('is-active') : btn.parentElement.classList.add('is-active')
+      })
+      if (currentPageItem) {
+        if (collapse) activateCurrentPath(currentPageItem)
+        scrollItemToMidpoint(menuPanel, currentPageItem.querySelector('.nav-link'))
+      } else {
+        menuPanel.scrollTop = 0
+      }
+    })
   }
 
   find(menuPanel, '.nav-item-toggle').forEach(function (btn) {
