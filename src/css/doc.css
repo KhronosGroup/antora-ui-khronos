@@ -652,7 +652,7 @@
 .doc .listingblock .title,
 .doc .openblock .title,
 .doc .videoblock .title,
-.doc .tableblock caption {
+.doc table.tableblock caption {
   color: var(--caption-font-color);
   font-size: calc(16 / var(--rem-base) * 1rem);
   font-style: var(--caption-font-style);
@@ -662,7 +662,7 @@
   padding-bottom: 0.075rem;
 }
 
-.doc .tableblock caption {
+.doc table.tableblock caption {
   text-align: left;
 }
 
@@ -773,7 +773,7 @@
 }
 
 /* NEEDS REVIEW prevent pre in table from causing article to exceed bounds */
-.doc .tableblock pre,
+.doc table.tableblock pre,
 .doc .listingblock.wrap pre {
   white-space: pre-wrap;
 }
