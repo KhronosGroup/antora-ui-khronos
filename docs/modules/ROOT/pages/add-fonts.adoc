@@ -21,7 +21,7 @@ Here are the steps involved.
 
 . Use npm (or Yarn) to install the font files from a package (e.g., https://www.npmjs.com/package/typeface-open-sans[typeface-open-sans])
 
- $ npm install --save typeface-open-sans
+ $ npm i --save typeface-open-sans
 
 . In [.path]_src/css_, add a corresponding CSS file (e.g., [.path]_typeface-open-sans.css_)
 . In that file, declare the font face:
@@ -64,7 +64,7 @@ TIP: If you're building on the default UI, you may instead want to define or upd
 
 . Test the new font by previewing your UI:
 
- $ gulp preview
+ $ npx gulp preview
 
 If you see the new font, you've now successfully added it to your UI.
 If you aren't sure, look for the https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Edit_fonts[All fonts on page] section in your browser's developer tools to see whether the font was loaded.
@@ -117,7 +117,7 @@ TIP: If you're building on the default UI, you may instead want to define or upd
 
 . Test the new font by previewing your UI:
 
- $ gulp preview
+ $ npx gulp preview
 
 If you see the new font, you've now successfully added it to your UI.
 If you aren't sure, look for the https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Edit_fonts[All fonts on page] section in your browser's developer tools to see whether the font was loaded.

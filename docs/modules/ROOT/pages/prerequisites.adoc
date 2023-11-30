@@ -10,9 +10,9 @@
 
 An Antora UI project is based on tools built atop Node.js, namely:
 
-* {url-node}[Node.js] (commands: `node` and `npm`)
+* {url-node}[Node.js] (commands: `node`, `npm`, and `npx`)
  ** {url-nvm}[nvm] (optional, but strongly recommended)
-* {url-gulp}[Gulp CLI] (command: `gulp`)
+* {url-gulp}[Gulp CLI] (command: `gulp`) (can be accessed via `npx gulp`)
 
 You also need {url-git}[git] (command: `git`) to pull down the project and push updates to it.
 
@@ -47,10 +47,16 @@ Once you have Node.js installed, you can proceed with installing the Gulp CLI.
 
 == Gulp CLI
 
-Next, you'll need the Gulp CLI (aka wrapper).
+Next, you may choose to install the Gulp CLI globally.
 This package provides the `gulp` command which executes the version of Gulp declared by the project.
-You should install the Gulp CLI globally (which resolves to a location in your user directory if you're using nvm) using the following command:
+You can install the Gulp CLI globally (which resolves to a location in your user directory if you're using nvm) using the following command:
 
- $ npm install -g gulp-cli
+ $ npm i -g gulp-cli
+
+Alternately, you can run the `gulp` command using `npx` once you've installed the project dependencies, thus waiving the requirement to install it globally.
+
+ $ npx gulp
+
+Using `npx gulp` is the preferred way to invoke the `gulp` command.
 
 Now that you have Node.js and Gulp installed, you're ready to set up the project.

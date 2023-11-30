@@ -54,6 +54,11 @@ npm manages software packages (i.e., software dependencies) that it downloads fr
 Software this project uses includes libraries that handle compilation as well as shared assets such as font files that are distributed as npm packages.
 npm is part of Node.js.
 
+npx (command: `npx`)::
+npx runs bin scripts that are either installed in [.path]_node_modules/.bin_ or that it manages itself (if there's no package.json).
+npx is the preferred way to run any command.
+npx is part of Node.js.
+
 package.json:::
 This file keeps track of the dependencies (described using fuzzy versions) that npm (or Yarn) should fetch.
 

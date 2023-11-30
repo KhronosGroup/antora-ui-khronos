@@ -23,9 +23,9 @@ That's the job of npm.
 
 In your terminal, execute the following command (while inside the project folder):
 
- $ npm install
+ $ npm i
 
-This command installs the dependencies listed in [.path]_package.json_ into the [.path]_node_modules/_ folder inside the project.
+The `npm i` command, short for `npm install`, installs the dependencies listed in [.path]_package.json_ into the [.path]_node_modules/_ folder inside the project.
 This folder does not get included in the UI bundle.
 The folder is safe to delete, though npm does a great job of managing it.
 
@@ -33,14 +33,19 @@ You'll notice another file which seems to be relevant here, [.path]_package-lock
 npm uses this file to determine which concrete version of a dependency to use, since versions in [.path]_package.json_ are typically just a range.
 The information in this file makes the build reproducible across different machines and runs.
 
-If a new dependency must be resolved that isn't yet listed in [.path]_package-lock.json_, npm will update this file with the new information when you run `npm install`.
+Installing the dependencies makes the `npx gulp` command available.
+You can verify this by querying the Gulp version:
+
+ $ npx gulp -v
+
+If a new dependency must be resolved that isn't yet listed in [.path]_package-lock.json_, npm will update this file with the new information when you run `npm i`.
 Therefore, you're advised to commit the [.path]_package-lock.json_ file into the repository whenever it changes.
 
 == Supported build tasks
 
 Now that the dependencies are installed, you should be able to run the `gulp` command to find out what tasks the build supports:
 
- $ gulp --tasks-simple
+ $ npx gulp --tasks-simple
 
 You should see:
 
