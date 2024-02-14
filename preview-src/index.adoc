@@ -4,6 +4,7 @@ Author Name
 :idseparator: -
 :!example-caption:
 :!table-caption:
+//:page-role: -toc
 :page-pagination:
 
 [.float-group]
