@@ -20,6 +20,18 @@ A common use of the `page-role` attribute is to label the home page.
 This is the home page.
 ----
 
+////
+Alternately, the role can be set on the document itself.
+
+[,asciidoc]
+----
+[.home]
+= Home
+
+This is the home page.
+----
+////
+
 The resulting HTML will include the following `<body>` start tag:
 
 [,html]
