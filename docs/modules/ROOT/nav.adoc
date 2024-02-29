@@ -10,6 +10,7 @@
  ** xref:add-fonts.adoc[]
 * xref:style-guide.adoc[]
  ** xref:inline-text-styles.adoc[]
+ ** xref:image-styles.adoc[]
  ** xref:admonition-styles.adoc[]
  ** xref:code-blocks.adoc[]
  ** xref:list-styles.adoc[]
