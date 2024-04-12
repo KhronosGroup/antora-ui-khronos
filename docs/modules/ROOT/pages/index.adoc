@@ -1,4 +1,4 @@
-= Antora Default UI
+= Antora Default UI Documentation
 // Settings:
 :hide-uri-scheme:
 // URLs:
