@@ -22,16 +22,16 @@
 // image:{img-ci-status}[CI Status (GitLab CI), link={url-ci-pipelines}]
 
 This project provides the default UI for Khronos {url-antora}[Antora] sites.
-The default branch is `main` and was forked from the `master` branch of the
+The default branch is `main`, which was forked from the `master` branch of the
 {url-project}[Antora Default UI] project on April 16, 2023 at commit
 41b1c83f648a656fcbb274a8003d7292ba4136b0.
+
 This repository will be kept loosely in synchronization with the upstream.
+`main` was resychronized with the upstream `master` on April 30, 2024 at
+commit 39ca9f14e9f100e21bbc9f7ce246a5440757b58f.
 
 The HLSL grammar was obtained from
 https://github.com/highlightjs/highlightjs-hlsl and is under an MIT license.
-
-The remainder of this README is from the original upstream README, which is
-also preserved in README.upstream.adoc.
 
 == Use the Default UI
 
