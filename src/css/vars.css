@@ -1,4 +1,5 @@
 :root {
+  color-scheme: light dark;
   /* colors */
   --color-white: #fff;
   --color-smoke-10: #fefefe;
@@ -18,35 +19,36 @@
   --color-jet-80: #191919;
   --color-black: #000;
   --color-vulkan: #a51e22;
+  --color-vulkan-dark: #420c0e;
   /* fonts */
   --rem-base: 18; /* used to compute rem value from desired pixel value (e.g., calc(18 / var(--rem-base) * 1rem) = 18px) */
   --body-font-size: 1.0625em; /* 17px */
   --body-font-size--desktop: 1.125em; /* 18px */
   --body-font-size--print: 0.9375em; /* 15px */
   --body-line-height: 1.15;
-  --body-font-color: var(--color-jet-70);
+  --body-font-color: light-dark(var(--color-jet-70), var(--color-smoke-30));
   --body-font-family: "Roboto", sans-serif;
   --body-font-weight-bold: 600;
   --monospace-font-family: "Roboto Mono", monospace;
   --monospace-font-weight-bold: 600;
   /* base */
-  --body-background: var(--color-white);
-  --panel-background: var(--color-smoke-30);
-  --panel-border-color: var(--color-smoke-90);
-  --scrollbar-track-color: var(--color-smoke-30);
-  --scrollbar-thumb-color: var(--color-gray-10);
-  --scrollbar_hover-thumb-color: var(--color-gray-30);
+  --body-background: light-dark(var(--color-white), var(--color-black));
+  --panel-background: light-dark(var(--color-smoke-30), var(--color-jet-70));
+  --panel-border-color: light-dark(var(--color-smoke-90), var(--color-jet-20));
+  --scrollbar-track-color: light-dark(var(--color-smoke-30), var(--color-jet-70));
+  --scrollbar-thumb-color: light-dark(var(--color-gray-10), var(--color-jet-20));
+  --scrollbar_hover-thumb-color: light-dark(var(--color-gray-30), var(--color-jet-70));
   /* navbar */
-  --navbar-background: var(--color-vulkan);
-  --navbar-font-color: var(--color-white);
-  --navbar_hover-background: var(--color-black);
-  --navbar-button-background: var(--color-white);
+  --navbar-background: light-dark(var(--color-vulkan), var(--color-vulkan-dark));
+  --navbar-font-color: light-dark(var(--color-white), var(--color-black));
+  --navbar_hover-background: light-dark(var(--color-black), var(--color-white));
+  --navbar-button-background: light-dark(var(--color-white), var(--color-black));
   --navbar-button-border-color: var(--panel-border-color);
   --navbar-button-font-color: var(--body-font-color);
   --navbar-menu-border-color: var(--panel-border-color);
-  --navbar-menu-background: var(--color-white);
+  --navbar-menu-background: light-dark(var(--color-white), var(--color-black));
   --navbar-menu-font-color: var(--body-font-color);
-  --navbar-menu_hover-background: var(--color-smoke-50);
+  --navbar-menu_hover-background: light-dark(var(--color-smoke-50), var(--color-jet-50));
   /* nav */
   --nav-background: var(--panel-background);
   --nav-border-color: var(--color-gray-10);
