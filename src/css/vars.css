@@ -19,7 +19,7 @@
   --color-jet-80: #191919;
   --color-black: #000;
   --color-vulkan: #a51e22;
-  --color-vulkan-dark: #420c0e;
+  --color-vulkan-dark: #741618;
   /* fonts */
   --rem-base: 18; /* used to compute rem value from desired pixel value (e.g., calc(18 / var(--rem-base) * 1rem) = 18px) */
   --body-font-size: 1.0625em; /* 17px */
@@ -76,13 +76,13 @@
   --warning-color: #e18114;
   --warning-on-color: var(--color-white);
   /* doc */
-  --doc-font-color: var(--color-jet-50);
+  --doc-font-color: light-dark(var(--color-jet-50), var(--color-smoke-30));
   --doc-font-size: inherit;
   --doc-font-size--desktop: calc(17 / var(--rem-base) * 1rem);
   --doc-line-height: 1.6;
   --doc-margin: 0 auto;
   --doc-margin--desktop: 0 2rem;
-  --heading-font-color: var(--color-jet-80);
+  --heading-font-color: light-dark(var(--color-jet-80), var(--color-smoke-30));
   --heading-font-weight: normal;
   --alt-heading-font-weight: var(--body-font-weight-bold);
   --section-divider-color: var(--panel-border-color);
@@ -90,11 +90,11 @@
   --link_hover-font-color: #104d92;
   --link_unresolved-font-color: var(--important-color);
   --abstract-background: var(--color-smoke-70);
-  --abstract-font-color: var(--color-jet-20);
+  --abstract-font-color: light-dark(var(--color-jet-20), var(--color-smoke-30));
   --abstract-border-color: var(--panel-border-color);
   --admonition-background: var(--panel-background);
   --admonition-label-font-weight: var(--body-font-weight-bold);
-  --caption-font-color: var(--color-gray-70);
+  --caption-font-color: light-dark(var(--color-gray-70), var(--color-smoke-30));
   --caption-font-style: italic;
   --caption-font-weight: var(--body-font-weight-bold);
   --code-background: var(--panel-background);
@@ -108,9 +108,9 @@
   --pre-annotation-font-color: var(--color-gray-50);
   --quote-background: var(--panel-background);
   --quote-border-color: var(--color-gray-70);
-  --quote-font-color: var(--color-gray-70);
+  --quote-font-color: light-dark(var(--color-gray-70), var(--color-smoke-30));
   --quote-attribution-font-color: var(--color-gray-40);
-  --sidebar-background: var(--color-smoke-90);
+  --sidebar-background: light-dark(var(--color-smoke-90), var(--color-jet-70));
   --table-border-color: var(--panel-border-color);
   --table-stripe-background: var(--panel-background);
   --table-footer-background: linear-gradient(to bottom, var(--color-smoke-70) 0%, var(--color-white) 100%);
@@ -122,7 +122,7 @@
   /* footer */
   --footer-line-height: var(--doc-line-height);
   --footer-background: var(--color-smoke-90);
-  --footer-font-color: var(--color-gray-70);
+  --footer-font-color: light-dark(var(--color-gray-70), var(--color-smoke-30));
   --footer-link-font-color: var(--color-jet-80);
   /* dimensions and positioning */
   --navbar-height: calc(63 / var(--rem-base) * 1rem);
