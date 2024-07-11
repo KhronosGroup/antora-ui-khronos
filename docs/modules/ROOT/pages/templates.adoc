@@ -222,3 +222,125 @@ Each template file has access to the template model, which exposes information a
 The variables currently available are listed in <<template-variables-ref>>.
 
 Save the file, commit it to git, push the branch, and allow the approval workflow to play out.
+
+== Using built-in helpers
+
+Antora provides the following built-in template helpers:
+
+relativize:: Converts a root-relative URL to a URL path that is relative to the current page.
+resolvePageURL:: Resolves the specified page from a page reference and returns the root-relative URL of that page.
+resolvePage:: Resolves the specified page from a page reference, converts it to a UI page model (unless `model=false`), and returns it.
+
+These helpers are available in any Antora UI, not just the default UI.
+
+=== relativize
+
+Antora stores the URL of each publishable resource as a root-relative URL (i.e., /component/version/module/page.html).
+The root in this case is the root of the site (the site URL).
+Antora stores URLs in this way so they can be used to create a relative path from the current page to the target resource, independent of the site's configuration.
+That's the purpose of the `relativize` helper in a template.
+
+.Why use relativize?
+****
+By using relative paths for references, the site is not couple to the URL from which it is served.
+That means the site can be moved around without breaking references.
+It also means the site can be previewed locally without a web server.
+****
+
+You can find the `relativize` helper used throughout the templates in the default UI.
+Here's an example that uses the `relativize` helper to create a relative link to the next page in the navigation.
+
+[,html]
+----
+{{#with page.next}}
+<a href="{{{relativize ./url}}}">{{{./content}}}</a>
+{{/with}}
+----
+
+When creating a link to a URL within the site, you should always wrap it in the `relativize` helper.
+
+=== resolvePageURL
+
+If you want to create a link to another page in your template, you can use the `resolvePageURL` helper.
+This helper resolves the specified page and returns the root-relative URL of that page.
+It's the commplement of the xref macro in the AsciiDoc source.
+
+This helper accepts a page reference, just like the target of the xref macro.
+Internally, this helper uses `ContentCatalog#resolvePage` to resolve the reference.
+The reference will be resolved relative to the module of the page being composed unless broadened by an explicit module, version, or component segment.
+However, since a template is often used by every page in the site, you almost always want this reference to be fully-qualified.
+
+For information about the syntax of a page reference, refer to xref:antora:page:resource-id-coordinates.adoc[resource reference] documentation.
+
+Here's an example that creates a link to another page using the `resolvePageURL` helper.
+
+[,html]
+----
+<a href="{{{relativize (resolvePageURL 'about::support.adoc')}}}">Support</a>
+----
+
+This helper also accepts a context object for specifying the module, version, and component, which can be useful when pages share a common naming pattern.
+
+[,html]
+----
+<a href="{{{relativize (resolvePageURL 'support.adoc' component='about')}}}">Support</a>
+----
+
+The disadvantage of the `resolvePageURL` helper is that it only returns the root-relative URL, not the model of the page.
+If you need more information about the page, such as its title, you can use the `resolvePage` instead.
+
+=== resolvePage
+
+If you want to resolve another page in your template, perhaps to create a link to it, or perhaps to show some information from its model, you can use the `resolvePage` helper.
+This helper resolves the specified page and returns the page model for that page.
+//The page model is the same model used for the `page` variable in the template.
+//In other words, this helper allows you to switch the context of the template to that of another page.
+
+This helper accepts a page reference.
+Internally, this helper uses `ContentCatalog#resolvePage` to resolve the reference.
+
+Here's an example of how to use the `resolvePage` helper to make a link to another page, using the title of that page as the link text.
+
+[,html]
+----
+{{#with (resolvePage 'about::support.adoc')}}<a href="{{relativize ./url}}">{{{./title}}}</a>{{/with}}
+----
+
+This helper also accepts a context object for specifying the module, version, and component, which can be useful when pages share a common naming pattern.
+
+[,html]
+----
+{{#with (resolvePage 'support.adoc' component='about')}}<a href="{{relativize ./url}}">{{{./title}}}</a>{{/with}}
+----
+
+The object returned by the `resolvePage` helper is the UI page model, which is the same model used by the `page` variable.
+You can use the `log` helper inspect the object that this helper returns.
+
+[,html]
+----
+{{log (resolvePage 'about::support.adoc')}}
+----
+
+NOTE: The `resolvePage` helper is typically used inside a `with` block to switch the template's context to the resolved object.
+
+If you want the original virtual file as returned by `ContentCatalog#resolvePage`, you must set the `model=false` argument on the helper.
+Among other things, this gives you access to all the document attributes associated with that page, not just the page attributes.
+
+[,html]
+----
+{{#with (resolvePage 'program::policy-a.adoc' model=false)}}
+<a href="{{relativize ./pub.url}}">{{{./asciidoc.xreftext}}}</a> {{./asciidoc.attributes.next-review-date}}
+{{/with}}
+----
+
+If you need to access the virtual file for the current page, you can do so as follows:
+
+[,html]
+----
+{{#with (resolvePage page.relativeSrcPath model=false)}}
+{{log ./asciidoc.attributes}}
+{{/with}}
+----
+
+Currently, there is no equivalent helper for resolving a non-page resource, but that may be added in the future.
+In the meantime, you could develop your own helper to provide that functionality.
