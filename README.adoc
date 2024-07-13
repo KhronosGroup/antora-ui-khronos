@@ -27,8 +27,8 @@ The default branch is `main`, which was forked from the `master` branch of the
 41b1c83f648a656fcbb274a8003d7292ba4136b0.
 
 This repository will be kept loosely in synchronization with the upstream.
-`main` was resychronized with the upstream `master` on April 30, 2024 at
-commit 39ca9f14e9f100e21bbc9f7ce246a5440757b58f.
+`main` was resychronized with the upstream `master` on July 12, 2024 at
+commit 733f0a6628ae18180a6e18b3589f033790114aa3.
 
 The HLSL grammar was obtained from
 https://github.com/highlightjs/highlightjs-hlsl and is under an MIT license.
