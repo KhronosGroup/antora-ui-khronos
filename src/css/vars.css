@@ -108,7 +108,7 @@
   --quote-border-color: var(--color-gray-70);
   --quote-font-color: var(--color-gray-70);
   --quote-attribution-font-color: var(--color-gray-40);
-  --sidebar-background: var(--color-smoke-90);
+  --sidebar-background: var(--color-white);
   --table-border-color: var(--panel-border-color);
   --table-stripe-background: var(--panel-background);
   --table-footer-background: linear-gradient(to bottom, var(--color-smoke-70) 0%, var(--color-white) 100%);
