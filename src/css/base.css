@@ -147,3 +147,87 @@ object[type="image/svg+xml"]:not([width]) {
     background-color: var(--scrollbar_hover-thumb-color);
   }
 }
+
+.theme-toggler {
+  align-self: center;
+  background: #d7e7e7;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 13px;
+  height: 10px;
+  margin-left: 5px;
+  margin-right: 1rem;
+  position: relative;
+  width: 36px;
+}
+
+.theme-toggler input {
+  opacity: 0;
+}
+
+.theme-toggler .moon {
+  display: none;
+}
+
+.theme-toggler span.text {
+  background-color: transparent;
+  display: block;
+  overflow: hidden;
+  text-indent: -6000em;
+}
+
+.theme-toggler span.icon {
+  background: #000;
+  border-radius: 12px;
+  color: #fff;
+  display: block;
+  height: 24px;
+  left: -1px;
+  position: absolute;
+  top: -7px;
+  transition: left 0.5s;
+  width: 24px;
+}
+
+.theme-toggler span.icon svg {
+  box-sizing: content-box;
+  height: 1em;
+  overflow: visible;
+}
+
+.theme-toggler span.icon .moon {
+  margin-left: 7px;
+  margin-top: 5px;
+}
+
+.theme-toggler span.icon .sun {
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.theme-toggler.active {
+  background: #41464b;
+}
+
+.theme-toggler.active span.icon {
+  background: #fff;
+  color: #000;
+  left: 14px;
+}
+
+.theme-toggler.active span.icon .sun {
+  display: none;
+}
+
+.theme-toggler.active span.icon .moon {
+  display: block;
+}
+
+@media screen and (max-width: 1024px) {
+  .theme-toggler {
+    position: absolute;
+    right: 0;
+    top: 90px;
+  }
+}

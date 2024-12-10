@@ -8,7 +8,7 @@
 .hljs-keyword,
 .hljs-selector-tag,
 .hljs-subst {
-  color: #333;
+  color: var(--hljs-keyword);
   font-weight: var(--monospace-font-weight-bold);
 }
 
@@ -38,14 +38,14 @@
 
 .hljs-type,
 .hljs-class .hljs-title {
-  color: #458;
+  color: var(--hljs-type);
   font-weight: var(--monospace-font-weight-bold);
 }
 
 .hljs-tag,
 .hljs-name,
 .hljs-attribute {
-  color: #000080;
+  color: var(--hljs-var);
   font-weight: normal;
 }
 
@@ -70,11 +70,11 @@
 }
 
 .hljs-deletion {
-  background: #fdd;
+  background: var(--hljs-remove);
 }
 
 .hljs-addition {
-  background: #dfd;
+  background: var(--hljs-addition);
 }
 
 .hljs-emphasis {
