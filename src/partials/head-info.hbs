@@ -18,3 +18,9 @@
     {{#with (or antoraVersion site.antoraVersion)}}
     <meta name="generator" content="Antora {{{this}}}">
     {{/with}}
+    <script>
+      !function (theme) {
+        if (theme === 'dark') document.documentElement.classList.add('dark')
+        else document.documentElement.classList.add('light')
+      }(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
+    </script>

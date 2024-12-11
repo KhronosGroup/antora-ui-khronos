@@ -42,7 +42,7 @@
   --scrollbar_hover-thumb-color: var(--color-gray-30);
   /* navbar */
   --navbar-background: var(--color-vulkan);
-  --navbar-font-color: var(--color-black);
+  --navbar-font-color: var(--color-white);
   --navbar_hover-background: var(--color-black);
   --navbar-button-background: var(--color-white);
   --navbar-button-border-color: var(--panel-border-color);
