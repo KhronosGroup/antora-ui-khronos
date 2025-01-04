@@ -1085,3 +1085,7 @@
   text-align: right;
   width: 1.5em;
 }
+
+:root.dark img[src$=".svg"] {
+  filter: invert(1);
+}
