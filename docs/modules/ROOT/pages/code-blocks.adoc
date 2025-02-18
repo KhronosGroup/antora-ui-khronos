@@ -4,7 +4,7 @@
 This page describes some of the styles and behaviors of code blocks and how to support them in a custom UI.
 
 In AsciiDoc, code blocks a referred to as source and listing blocks.
-A source block is a listing block that has a source language defined on it (e.g., javascript).
+A source block is a listing block that has a source language defined on it (e.g., `javascript`).
 Refer to xref:antora:asciidoc:source.adoc[source blocks] to learn more about source blocks in AsciiDoc and how they are used in Antora.
 
 Readers typically expect that a source block will be presented with syntax highlighting, so we'll start there.
