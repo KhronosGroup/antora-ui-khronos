@@ -49,7 +49,7 @@ always true!
 The round brackets are always required around a helper function call (except in cases when they're implied by Handlebars).
 
 The helper can access top-level variables in the template by accepting the template context as the final parameter.
-The top-level variables are stored in in the `data.root` property of this object.
+The top-level variables are stored in the `data.root` property of this object.
 
 .new-helper.js
 [,js]

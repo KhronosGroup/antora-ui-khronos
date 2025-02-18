@@ -85,7 +85,7 @@ Antora automatically calculates the appropriate URLs and inserts the correct lin
 Since you most likely want this enabled for every page in your site, there's no point setting this attribute per page.
 However, if you do want to be able to override it per page, such as to turn it off, then you need to soft set the value in the playbook.
 
-.Enable pagination, but make it overriddable
+.Enable pagination, but make it overridable
 [,yaml]
 ----
 asciidoc:
