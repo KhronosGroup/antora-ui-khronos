@@ -66,3 +66,15 @@
 .toolbar .edit-this-page a {
   color: var(--toolbar-muted-color);
 }
+
+:root.dark {
+  .toolbar button {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+  }
+
+  .toolbar .home-link {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+  }
+}
