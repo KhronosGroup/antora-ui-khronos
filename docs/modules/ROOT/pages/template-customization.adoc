@@ -94,3 +94,63 @@ asciidoc:
 ----
 
 You can now turn page pagination off by unsetting the `page-pagination` attribute in the document header.
+
+== page-toctitle attribute
+
+By default, the title (i.e., heading) text for the automatic TOC in the right-hand sidebar of the page is `Contents`.
+You can set the `page-toctitle` page attribute in the page header to customize this text for a given page.
+
+NOTE: Antora does not use the built-in `toctitle` attribute from AsciiDoc.
+
+.Customize the TOC title for a page
+[,asciidoc]
+----
+= Page Title
+:page-toctitle: Outline
+
+== Section Title
+
+Paragraph text.
+----
+
+You can define this value in the playbook to set it globally.
+
+.Customize the TOC title for all pages
+[,yaml]
+----
+asciidoc:
+  attributes:
+    page-toctitle: Outline
+----
+
+Alternately, you can override the [.path]_toc.hbs_ template if you want to hard-code the value, consult a different attribute, or change the defaut value.
+
+== page-toclevels attribute
+
+By default, the the automatic TOC in the right-hand sidebar of the page shows two levels of headings.
+You can set the `page-toclevels` page attribute in the page header to customize this depth for a given page.
+
+NOTE: Antora does not use the built-in `toclevels` attribute from AsciiDoc.
+
+.Customize the TOC levels for a page
+[,asciidoc]
+----
+= Page Title
+:page-toclevels: 1
+
+== Section Title
+
+Paragraph text.
+----
+
+You can define this value in the playbook to set it globally.
+
+.Customize the TOC title for all pages
+[,yaml]
+----
+asciidoc:
+  attributes:
+    page-toclevels: 1
+----
+
+Alternately, you can override the [.path]_toc.hbs_ template if you want to hard-code the value, consult a different attribute, or change the default value.
