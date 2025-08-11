@@ -4,7 +4,7 @@
 This page describes some of the styles and behaviors of code blocks and how to support them in a custom UI.
 
 In AsciiDoc, code blocks a referred to as source and listing blocks.
-A source block is a listing block that has a source language defined on it (e.g., javascript).
+A source block is a listing block that has a source language defined on it (e.g., `javascript`).
 Refer to xref:antora:asciidoc:source.adoc[source blocks] to learn more about source blocks in AsciiDoc and how they are used in Antora.
 
 Readers typically expect that a source block will be presented with syntax highlighting, so we'll start there.
@@ -48,7 +48,7 @@ This page describes the copy to clipboard feature added to source blocks when us
 
 === Source blocks
 
-The default UI automatically adds a clipboard button to all source blocks and provides the necesssary CSS and JavaScript to support that behavior.
+The default UI automatically adds a clipboard button to all source blocks and provides the necessary CSS and JavaScript to support that behavior.
 The clipboard button shows up next to the language label when the mouse is hovered over the block.
 When the user clicks the clipboard button, the contents of the source block will be copied to the user's clipboard and a notification overlay will be briefly shown.
 

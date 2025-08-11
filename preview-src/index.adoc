@@ -97,6 +97,20 @@ vfs
 <.> Wrap each streaming file in a buffer so the files can be processed by uglify.
 Uglify can only work with buffers, not streams.
 
+Here's the same code with the `wrap` role added, which enables pre-wrap, if that's your speed.
+
+[.wrap,js]
+----
+vfs
+  .src('js/vendor/*.js', { cwd: 'src', cwdbase: true, read: false })
+  .pipe(tap((file) => {
+    file.contents = browserify(file.relative, { basedir: 'src', detectGlobals: false }).bundle()
+  }))
+  .pipe(buffer())
+  .pipe(uglify())
+  .pipe(gulp.dest('build'))
+----
+
 Execute these commands to validate and build your site:
 
  $ podman run -v $PWD:/antora:Z --rm -t antora/antora \
