@@ -263,7 +263,7 @@ When creating a link to a URL within the site, you should always wrap it in the 
 
 If you want to create a link to another page in your template, you can use the `resolvePageURL` helper.
 This helper resolves the specified page and returns the root-relative URL of that page.
-It's the commplement of the xref macro in the AsciiDoc source.
+It's the complement of the xref macro in the AsciiDoc source.
 
 This helper accepts a page reference, just like the target of the xref macro.
 Internally, this helper uses `ContentCatalog#resolvePage` to resolve the reference.

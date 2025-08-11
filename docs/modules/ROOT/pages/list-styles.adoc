@@ -53,7 +53,7 @@ Here's an AsciiDoc source example that produces a checklist:
 
 [source,asciidoc]
 ----
-* [ ] todo
+* [ ] to do
 * [x] done!
 ----
 
@@ -64,7 +64,7 @@ If font-based icons are enabled (`icons=font`), the checkbox gets inserted as th
 <div class="ulist checklist">
 <ul class="checklist">
 <li>
-<p><i class="fa fa-square-o"> todo</p>
+<p><i class="fa fa-square-o"> to do</p>
 </li>
 <li>
 <p><i class="fa fa-check-square-o"> done!</p>
@@ -77,5 +77,5 @@ The recommended approach is to hide the list markers (`list-style: none`), then 
 
 Here's how it might appear:
 
-* [ ] todo
+* [ ] to do
 * [*] done!
