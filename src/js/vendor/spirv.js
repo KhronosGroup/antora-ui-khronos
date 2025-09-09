@@ -50,7 +50,7 @@ module.exports = function (hljs) {
     'imageCube', 'iimageCube', 'uimageCube', 'imageBuffer', 'iimageBuffer', 'uimageBuffer',
     'image1DArray', 'iimage1DArray', 'uimage1DArray', 'image2DArray', 'iimage2DArray', 'uimage2DArray',
     'imageCubeArray', 'iimageCubeArray', 'uimageCubeArray',
-    'image2DMS', 'iimage2DMS', 'uimage2DMS', 'image2DMSArray', 'iimage2DMSArray', 'uimage2DMSArray'
+    'image2DMS', 'iimage2DMS', 'uimage2DMS', 'image2DMSArray', 'iimage2DMSArray', 'uimage2DMSArray',
   ]
 
   return {
