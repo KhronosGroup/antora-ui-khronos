@@ -111,6 +111,57 @@ vfs
   .pipe(gulp.dest('build'))
 ----
 
+.Slang shader example
+[,slang]
+----
+struct VertexInput {
+    float3 position : POSITION;
+    float2 texCoord : TEXCOORD0;
+};
+
+struct VertexOutput {
+    float4 position : SV_Position;
+    float2 texCoord : TEXCOORD0;
+};
+
+VertexOutput vertexMain(VertexInput input) {
+    VertexOutput output;
+    output.position = float4(input.position, 1.0);
+    output.texCoord = input.texCoord;
+    return output;
+}
+----
+
+.SPIR-V assembly example
+[,spirv]
+----
+               OpCapability Shader
+          %1 = OpExtInstImport "GLSL.std.450"
+               OpMemoryModel Logical GLSL450
+               OpEntryPoint Vertex %main "main" %position %texCoord
+               OpSource GLSL 450
+               OpName %main "main"
+               OpName %position "position"
+               OpName %texCoord "texCoord"
+               OpDecorate %position Location 0
+               OpDecorate %texCoord Location 1
+       %void = OpTypeVoid
+          %3 = OpTypeFunction %void
+      %float = OpTypeFloat 32
+    %v3float = OpTypeVector %float 3
+%_ptr_Input_v3float = OpTypePointer Input %v3float
+   %position = OpVariable %_ptr_Input_v3float Input
+    %v2float = OpTypeVector %float 2
+%_ptr_Input_v2float = OpTypePointer Input %v2float
+   %texCoord = OpVariable %_ptr_Input_v2float Input
+       %main = OpFunction %void None %3
+          %5 = OpLabel
+               OpReturn
+               OpFunctionEnd
+----
+=======
+
+
 Execute these commands to validate and build your site:
 
  $ podman run -v $PWD:/antora:Z --rm -t antora/antora \
