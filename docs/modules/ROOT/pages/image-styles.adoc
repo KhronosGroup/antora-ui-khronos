@@ -34,7 +34,7 @@ If you want the image and its caption to be aligned to the right side of the con
 
 [,asciidoc]
 ----
-[.text-left]
+[.text-right]
 image::my-image.png[]
 ----
 
