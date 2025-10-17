@@ -84,3 +84,8 @@
 .hljs-strong {
   font-weight: var(--monospace-font-weight-bold);
 }
+
+/* Multilang code block support */
+pre.multilang code { display: none; }
+pre.multilang code.is-active { display: block; }
+.code-lang-selector { margin: 0 0 0.5rem; font: inherit; font-size: 0.9em; }
