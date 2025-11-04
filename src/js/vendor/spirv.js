@@ -1,6 +1,9 @@
 // Copyright 2025 Holochip Inc
 // SPDX-License-Identifier: MIT
 
+/* eslint-disable max-len */
+// NOTE: max-len disabled for vendor file to preserve upstream formatting while avoiding lint noise.
+
 // Based on hlsl.js structure
 // SPIR-V language definition for highlight.js
 
