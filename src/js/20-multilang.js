@@ -1,3 +1,4 @@
+/* eslint-env browser */
 (function () {
   'use strict'
 
@@ -20,7 +21,7 @@
           buf = []
         }
         curr = mStart[1]
-        if (!blocks.hasOwnProperty(curr)) order.push(curr)
+        if (!Object.prototype.hasOwnProperty.call(blocks, curr)) order.push(curr)
         // reset buffer for this lang
         buf = []
         continue
