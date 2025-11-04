@@ -79,7 +79,14 @@
     const dl = (pre.dataset && pre.dataset.languages) || (code.dataset && code.dataset.languages)
     if (dl) declared = dl.split(',').map((s) => s.trim()).filter(Boolean)
 
-    const langs = declared.length ? declared.filter((l) => parsed.langs.includes(l)).concat(parsed.langs.filter((l) => !declared.includes(l))) : parsed.langs
+    let langs
+    if (declared.length) {
+      const declaredInParsed = declared.filter((l) => parsed.langs.includes(l))
+      const rest = parsed.langs.filter((l) => !declared.includes(l))
+      langs = declaredInParsed.concat(rest)
+    } else {
+      langs = parsed.langs
+    }
     pre.dataset.languages = langs.join(',')
 
     // build selector
@@ -143,7 +150,8 @@
     blocks.forEach(function (code) {
       var pre = code.parentNode
       // only process if language is marked as multilang or content contains markers
-      var isMulti = (code.getAttribute('data-lang') || '').toLowerCase() === 'multilang' || /\n\s*\/\/\s*START\s+[A-Za-z0-9_-]+/i.test(code.textContent)
+      var isMulti = (code.getAttribute('data-lang') || '').toLowerCase() === 'multilang' ||
+        /\n\s*\/\/\s*START\s+[A-Za-z0-9_-]+/i.test(code.textContent)
       if (!isMulti) return
       try { enhanceMultilangBlock(pre, code) } catch (e) { /* fail-safe */ }
     })
