@@ -115,6 +115,14 @@
 
 .doc a {
   color: var(--link-font-color);
+  /* Improve link distinguishability: ensure non-color cue (WCAG 1.4.1/1.4.3) */
+  text-decoration: underline;
+  text-underline-offset: 0.08em;
+}
+
+/* Avoid fallback purple visited color that may fail contrast in dark mode */
+.doc a:visited {
+  color: var(--link-font-color);
 }
 
 .doc a:hover {
