@@ -94,3 +94,23 @@ pre.multilang code.is-active { display: block; }
   font: inherit;
   font-size: 0.9em;
 }
+
+/* Dark theme readability tweaks */
+:root.dark .hljs-comment,
+:root.dark .hljs-quote {
+  color: #b0b0b0;
+}
+
+:root.dark .hljs-title,
+:root.dark .hljs-section,
+:root.dark .hljs-selector-id {
+  color: #ff6b6b;
+}
+
+:root.dark .hljs-number,
+:root.dark .hljs-literal,
+:root.dark .hljs-variable,
+:root.dark .hljs-template-variable,
+:root.dark .hljs-tag .hljs-attr {
+  color: #7fd3ff;
+}

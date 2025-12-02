@@ -39,6 +39,27 @@ a:active {
   background-color: none;
 }
 
+/* Visible focus outlines for keyboard users */
+:root .focus-outline-reset { outline: none !important; }
+
+a[href]:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+.navbar-burger:focus-visible,
+.theme-toggler:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* Search input uses the same visible focus ring */
+#search-input:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
 code,
 kbd,
 pre {

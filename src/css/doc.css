@@ -1086,6 +1086,6 @@
   width: 1.5em;
 }
 
-:root.dark img[src$=".svg"] {
+:root.dark img[src$=".svg"]:not(.no-invert) {
   filter: invert(1);
 }
