@@ -121,6 +121,18 @@
   visibility: visible;
 }
 
+/* Dark mode: ensure nav expand/collapse icons remain visible.
+   These controls use dark SVG sprites as CSS background images, which
+   blend into dark backgrounds. Invert them to render light-on-dark. */
+:root.dark .nav-menu-toggle,
+:root.dark .nav-menu-toggle.is-active {
+  filter: invert(1);
+}
+
+:root.dark .nav-item-toggle {
+  filter: invert(1);
+}
+
 .nav-menu h3.title {
   color: var(--nav-heading-font-color);
   font-size: inherit;
