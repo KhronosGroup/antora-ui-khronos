@@ -305,9 +305,9 @@
     --navbar_hover-background: #1a1a1a;
     --navbar-button-background: #2a2a2a;
     --navbar-menu-background: #252525;
-    --navbar-menu_hover-background: #333333;
+    --navbar-menu_hover-background: #333;
     --doc-font-color: #e0e0e0;
-    --heading-font-color: #eeeeee;
+    --heading-font-color: #eee;
     --abstract-font-color: #d4d4d4;
     --caption-font-color: #b8b8b8;
     --quote-font-color: #c0c0c0;
@@ -472,9 +472,9 @@
   --navbar_hover-background: #1a1a1a;
   --navbar-button-background: #2a2a2a;
   --navbar-menu-background: #252525;
-  --navbar-menu_hover-background: #333333;
+  --navbar-menu_hover-background: #333;
   --doc-font-color: #e0e0e0;
-  --heading-font-color: #eeeeee;
+  --heading-font-color: #eee;
   --abstract-font-color: #d4d4d4;
   --caption-font-color: #b8b8b8;
   --quote-font-color: #c0c0c0;
