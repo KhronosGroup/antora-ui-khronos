@@ -105,7 +105,7 @@
   --caption-font-weight: var(--body-font-weight-bold);
   --code-background: var(--panel-background);
   --code-font-color: var(--body-font-color);
-  --example-background: var(--color-white);
+  --example-background: #f5f5f5;
   --example-border-color: var(--color-gray-70);
   --kbd-background: var(--panel-background);
   --kbd-border-color: var(--color-gray-10);
@@ -249,7 +249,7 @@
     --caption-font-weight: var(--body-font-weight-bold);
     --code-background: var(--panel-background);
     --code-font-color: var(--body-font-color);
-    --example-background: var(--color-white);
+    --example-background: #2d2d2d;
     --example-border-color: var(--color-gray-70);
     --kbd-background: var(--panel-background);
     --kbd-border-color: var(--color-gray-10);
@@ -325,7 +325,6 @@
     --hljs-remove: #ff5370;
     --hljs-addition: #69c86f;
     --doc-code-background-color: #2d2d2d; /* Dark background for code blocks */
-    --doc-font-color: #e0e0e0; /* Light text for dark mode */
   }
 }
 
@@ -404,7 +403,6 @@
   --link-font-color: #1565c0;
   /* Improve link contrast on dark backgrounds */
   --link_hover-font-color: #9acbff;
-  --link-font-color: #64b5f6;
   --link_unresolved-font-color: var(--important-color);
   /* focus & search highlight */
   --focus-ring: #64b5f6;
@@ -418,7 +416,7 @@
   --caption-font-weight: var(--body-font-weight-bold);
   --code-background: var(--panel-background);
   --code-font-color: var(--body-font-color);
-  --example-background: var(--color-white);
+  --example-background: #2d2d2d;
   --example-border-color: var(--color-gray-70);
   --kbd-background: var(--panel-background);
   --kbd-border-color: var(--color-gray-10);
@@ -494,7 +492,6 @@
   --hljs-remove: #ff5370;
   --hljs-addition: #69c86f;
   --doc-code-background-color: #2d2d2d; /* Dark background for code blocks */
-  --doc-font-color: #e0e0e0; /* Light text for dark mode */
 }
 
 #search-field {
@@ -544,7 +541,7 @@
 }
 
 :root.dark .exampleblock {
-  background-color: rgb(45, 45, 45); /* Slightly lighter dark background for example blocks */
+  background-color: var(--doc-code-background-color);
 }
 
 :root.dark .exampleblock > .content > p {
