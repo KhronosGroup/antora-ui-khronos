@@ -543,9 +543,5 @@
 
 :root.dark .exampleblock > .content > p {
   color: hsl(0, 0%, 98%); /* Ensure text is light in dark mode */
-}
-
-/* This rule is common to both modes, ensuring content background is transparent */
-.exampleblock > .content {
   background-color: transparent;
 }
