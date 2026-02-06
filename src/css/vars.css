@@ -536,3 +536,16 @@
   border-radius: 2px;
   padding: 0 2px;
 }
+
+:root.dark .exampleblock {
+  background-color: rgb(45, 45, 45); /* Slightly lighter dark background for example blocks */
+}
+
+:root.dark .exampleblock > .content > p {
+  color: hsl(0, 0%, 98%); /* Ensure text is light in dark mode */
+}
+
+/* This rule is common to both modes, ensuring content background is transparent */
+.exampleblock > .content {
+  background-color: transparent;
+}
